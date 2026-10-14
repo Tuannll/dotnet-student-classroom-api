@@ -5,6 +5,7 @@
 **RESTful Web API mẫu quản lý Sinh viên & Lớp môn học (Quan hệ Nhiều - Nhiều) xây dựng trên nền tảng .NET 10, Entity Framework Core và Scalar OpenAPI.**
 
 [![.NET](https://img.shields.io/badge/.NET-10.0-512BD4?style=flat-square&logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/)
+[![CI](https://github.com/Tuannll/dotnet-student-classroom-api/actions/workflows/ci.yml/badge.svg)](https://github.com/Tuannll/dotnet-student-classroom-api/actions/workflows/ci.yml)
 [![C#](https://img.shields.io/badge/C%23-13-239120?style=flat-square&logo=csharp&logoColor=white)](https://learn.microsoft.com/dotnet/csharp/)
 [![EF Core](https://img.shields.io/badge/EF%20Core-10.0-512BD4?style=flat-square&logo=nuget&logoColor=white)](https://learn.microsoft.com/ef/core/)
 [![Scalar](https://img.shields.io/badge/API%20Docs-Scalar-E83E8C?style=flat-square)](https://scalar.com/)
