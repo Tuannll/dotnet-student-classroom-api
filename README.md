@@ -38,8 +38,8 @@
 
 ### 1. Clone mã nguồn
 ```bash
-git clone https://github.com/USER/REPO.git
-cd REPO
+git clone https://github.com/Tuannll/dotnet-student-classroom-api.git
+cd dotnet-student-classroom-api
 ```
 
 ### 2. Khôi phục packages & Build
