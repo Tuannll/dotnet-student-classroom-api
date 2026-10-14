@@ -1,0 +1,87 @@
+@TH5_HostAddress = http://localhost:5096
+
+### 1. Lấy danh sách tất cả sinh viên
+GET {{TH5_HostAddress}}/api/students
+Accept: application/json
+
+### 2. Lấy thông tin chi tiết sinh viên theo Id
+GET {{TH5_HostAddress}}/api/students/1
+Accept: application/json
+
+### 3. Thêm sinh viên mới (DateOfBirth theo định dạng chỉ ngày yyyy-MM-dd)
+POST {{TH5_HostAddress}}/api/students
+Content-Type: application/json
+
+{
+  "name": "Hoang Van E",
+  "studentCode": "SV005",
+  "dateOfBirth": "2004-11-20"
+}
+
+### 4. Cập nhật thông tin sinh viên theo Id
+PUT {{TH5_HostAddress}}/api/students/1
+Content-Type: application/json
+
+{
+  "name": "Nguyen Van A Updated",
+  "studentCode": "SV001",
+  "dateOfBirth": "2003-01-15"
+}
+
+### 5. Lấy danh sách lớp học của sinh viên
+GET {{TH5_HostAddress}}/api/students/1/classrooms
+Accept: application/json
+
+### 6. Xoá sinh viên theo Id
+DELETE {{TH5_HostAddress}}/api/students/4
+
+### -------------------------------------------------------------
+### 7. Lấy danh sách tất cả lớp học
+GET {{TH5_HostAddress}}/api/classrooms
+Accept: application/json
+
+### 8. Lấy chi tiết lớp học theo Id
+GET {{TH5_HostAddress}}/api/classrooms/1
+Accept: application/json
+
+### 9. Thêm lớp học mới (Mã lớp tối thiểu 5 ký tự, sĩ số > 0)
+POST {{TH5_HostAddress}}/api/classrooms
+Content-Type: application/json
+
+{
+  "name": "Lap trinh Di dong Flutter",
+  "classCode": "CNTT-MB01",
+  "maxStudents": 35
+}
+
+### 10. Cập nhật lớp học theo Id
+PUT {{TH5_HostAddress}}/api/classrooms/1
+Content-Type: application/json
+
+{
+  "name": "Backend Development C# Advanced",
+  "classCode": "CNTT-BE01",
+  "maxStudents": 40
+}
+
+### 11. Ghi danh nhiều sinh viên vào lớp (chuẩn RESTful: POST /api/classrooms/{id}/students)
+POST {{TH5_HostAddress}}/api/classrooms/2/students
+Content-Type: application/json
+
+[2, 3]
+
+### 12. Ghi danh sinh viên theo endpoint phụ (POST /api/classrooms/enroll)
+POST {{TH5_HostAddress}}/api/classrooms/enroll
+Content-Type: application/json
+
+{
+  "classroomId": 2,
+  "studentIds": [4]
+}
+
+### 13. Lấy danh sách sinh viên trong lớp (sử dụng LINQ Join)
+GET {{TH5_HostAddress}}/api/classrooms/1/students
+Accept: application/json
+
+### 14. Xoá lớp học theo Id (kèm xoá sinh viên trong lớp)
+DELETE {{TH5_HostAddress}}/api/classrooms/2
